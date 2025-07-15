@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <image></image>Nehal
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="images/nehal.jpg" alt="Nehal Afsar" class="profile-img">
+            <div class="intro">
+                <h1>Hi, <br>I am <span>Nehal Afsar</span></h1>
+                <p class="title">Tech Enthusiast | Frontend & Python Developer</p>
+                <a href="#contact" class="btn">Hire me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About me</h2>
+        <div class="about-content">
+            <p>I am a passionate tech enthusiast with a strong foundation in web development and Python programming. I
+                specialize in building dynamic, user-friendly websites and applications using HTML, CSS, JavaScript, and
+                Python. I enjoy solving complex problems and continuously learning new technologies to improve my
+                skills.
+
+                In addition to frontend development, I have experience in data analysis using tools like Pandas,
+                Matplotlib, and Power BI. My ability to combine design, logic, and data-driven insights allows me to
+                deliver functional and impactful digital solutions.
+            </p>
+            <div class="img-cont">
+              <img src="images/about-img.png" alt="avatar" class="about-img" />
+            </div>
+
+        </div>
+        <a href="assests/resume.pdf" class="btn-outline">Download Resume</a>
+    </section>
+
+  <div class="center-wrapper">
+    <div class="tech-strip">
+      <h1>My Tech Stack</h1>
+      <p>Technologies I’ve been working with recently</p>
+      <div class="icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      </div>
+    </div>
+  </div>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="image-card">
+          <img src="images/Voice-assist.jpg" alt="VoiceNav"/>
+        </div>
+        <div class="project-data">
+          <h3>Voice Nav</h3>
+          <p>A Python-based voice assistant that automates daily tasks like web Browse, launching apps, and executing system commands through speech. Built with speech recognition and Selenium, VoiceNav supports hands-free control on Windows.</p>
+          <a href="#" class="btn-sm">View Work</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="image-card">
+          <img src="images/tic-tac-toes.webp" alt="Tic Tac Toe"/>
+        </div>
+        <div class="project-data">
+          <h3>Tic Tac Toe</h3>
+          <p>A two-player browser game that includes turn-based logic, real-time win detection, and a reset option. This project helped sharpen JavaScript event handling and DOM manipulation skills.</p>
+          <a href="#" class="btn-sm">View Work</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="image-card">
+          <img src="images/flipkart.png" alt="Flipkart Clone"/>
+        </div>
+        <div class="project-data">
+          <h3>Flipkart Clone</h3>
+          <p>An e-commerce front-end clone of Flipkart with category-based product listings, a search bar, and responsive navigation. Designed to simulate a real-world product grid layout with engaging UI elements.</p>
+          <a href="#" class="btn-sm">View Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+  <h2 class="section-title">Reviews</h2>
+  <div class="review-container">
+    <div class="review-card">
+      <img src="images/Icon Strategy.png" alt="Reviewer" class="review-img" />
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        "I've been consistently impressed with the quality of service provided by this website.
+        They have exceeded my expectations and delivered exceptional results.
+        Highly recommended!"
+      </p>
+      <h4 class="reviewer-name">John D.</h4>
+      <p class="reviewer-role">Company CEO</p>
+    </div>
+
+    <div class="review-card">
+      <img src="images/Icon Strategy.png" alt="Reviewer" class="review-img" />
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        "I've been consistently impressed with the quality of service provided by this website.
+        They have exceeded my expectations and delivered exceptional results.
+        Highly recommended!"
+      </p>
+      <h4 class="reviewer-name">John D.</h4>
+      <p class="reviewer-role">Company CEO</p>
+    </div>
+
+    <div class="review-card">
+      <img src="images/Icon Strategy.png" alt="Reviewer" class="review-img" />
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        "Nehal delivered exceptional results on our web project!"
+      </p>
+      <h4 class="reviewer-name">John D.</h4>
+      <p class="reviewer-role">Company CEO</p>
+    </div>
+  </div>
+</section>
+
+ <section class="contact" id="contact">
+    <div class="contact-info">
+      <h2>Contact</h2><br>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" />
+      <span class="error-message" id="name-error"></span>
+      <input type="email" placeholder="Email" />
+      <span class="error-message" id="email-error"></span>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <span class="error-message" id="message-error"></span>
+      <button type="submit">Send</button>
+    </form>
+    </div>
+    <div class="avatar">
+      <img src="images/avatar.png" alt="Avatar"/>
+      <h3>I do code <br>and make content <span>about it!</span></h3>
+      <p>
+        I’m a frontend and Python developer passionate about building responsive, user-friendly web applications.<br>
+        I specialize in HTML, CSS, JavaScript, and Python, with experience in data analysis and automation.<br>
+        I love solving real-world problems through clean code and continuous learning
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nehal Afsar – All rights reserved.</p>
+    <p>afsarnehal786@gmail.com</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="darkMode.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

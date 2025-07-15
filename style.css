@@ -1,0 +1,945 @@
+/* Universal selector: Applies these styles to all elements on the page. */
+* {
+    margin: 0; /* Removes default outer spacing around elements. */
+    padding: 0; /* Removes default inner spacing within elements. */
+    text-decoration: none; /* Removes underlines from links. */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height. */
+    font-family: 'Poppins', "Jost", "inter"; /* Sets preferred font families. */
+}
+
+/* Body styles: Applies to the entire content area of the HTML document. */
+body {
+    line-height: 1.6; /* Sets spacing between lines of text. */
+    color: #333; /* Sets default text color to a dark gray. */
+    /* Creates a subtle background gradient for the page. */
+    background: linear-gradient(135deg, #fefae0 0%, #fadadd 40%, #e0c3fc 80%, #8ec5fc 100%);
+}
+
+/* Hides the menu toggle (hamburger icon) by default on larger screens. */
+.menu-toggle{
+    display: none;
+}
+
+/* Link styles: Applies to all anchor (<a>) tags. */
+a {
+    text-decoration: none; /* Removes underline from links. */
+    color: inherit; /* Makes links inherit the text color of their parent element. */
+}
+
+/* Navbar styles: Applies to the main navigation bar at the top. */
+.navbar {
+    height: 60px; /* Sets a fixed height for the navigation bar. */
+    /* border: 1px solid black; */ /* Commented out: Used for debugging borders. */
+    display: flex; /* Uses Flexbox for arranging items in a row. */
+    align-items: center; /* Vertically centers items within the navbar. */
+    justify-content: space-between; /* Distributes items with space between them. */
+    font-weight: 800; /* Sets a bold font weight for navbar text. */
+}
+
+/* Logo styles: Applies to the logo/site title within the navbar. */
+.logo {
+    margin-left: 10px; /* Adds space to the left of the logo. */
+    animation: slideInLeft 1s ease-in-out; /* Applies an animation for the logo to slide in from the left. */
+}
+
+/* Keyframes for slideInLeft animation. */
+@keyframes slideInLeft {
+    from {
+        opacity: 0; /* Starts completely transparent. */
+        transform: translateX(-50px); /* Starts 50px to the left. */
+    }
+    to {
+        opacity: 1; /* Ends fully opaque. */
+        transform: translateX(0); /* Ends at its original position. */
+    }
+}
+
+/* Navigation links container styles. */
+.nav-links {
+    display: flex; /* Uses Flexbox to arrange links in a row. */
+    align-items: center; /* Vertically centers links. */
+    justify-content: space-around; /* Distributes links with space around them. */
+    width: 450px; /* Sets a fixed width for the links container. */
+    list-style: none; /* Removes bullet points from list items. */
+}
+
+/* Styles for individual navigation links. */
+nav a {
+    transition: color 0.3s ease; /* Adds a smooth transition when link color changes. */
+}
+
+/* Hover effect for navigation links. */
+nav a:hover {
+    color: #6A00F4; /* Changes link color on hover. */
+}
+
+/* Hero section styles: Applies to the main introductory section. */
+.hero {
+    height: 100vh; /* Sets height to full viewport height. */
+    display: flex; /* Uses Flexbox. */
+    align-items: center; /* Vertically centers content. */
+    animation: fadeIn 2s ease; /* Applies a fade-in animation. */
+}
+
+/* Keyframes for fadeIn animation. */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starts completely transparent. */
+    }
+    to {
+        opacity: 1; /* Ends fully opaque. */
+    }
+}
+
+/* Hero content container styles. */
+.hero-content {
+    display: flex; /* Uses Flexbox. */
+    align-items: center; /* Vertically centers content. */
+    justify-content: center; /* Horizontally centers content. */
+    width: 100%; /* Takes full width. */
+    gap: 6rem; /* Adds space between items (image and text). */
+    padding: 8%; /* Adds internal spacing. */
+    position: relative; /* Allows positioning of child elements (like the button) relative to this container. */
+}
+
+/* Profile image styles. */
+.profile-img {
+    width: 400px; /* Sets a fixed width. */
+    height: 400px; /* Sets a fixed height. */
+    background: linear-gradient(268deg, #E5B7ED, #4040ff); /* Adds a gradient background. */
+    border-radius: 50%; /* Makes the image circular. */
+    padding: 10px; /* Adds internal spacing. */
+    object-fit: cover; /* Ensures the image covers the area without distortion. */
+}
+
+/* Intro text container styles. */
+.intro {
+    text-align: left; /* Aligns text to the left. */
+}
+
+/* Heading inside the hero section. */
+.hero h1 {
+    font-size: 4rem; /* Large font size for the main heading. */
+    margin-top: -50px; /* Adjusts vertical position. */
+    margin-bottom: 50px; /* Adds space below the heading. */
+    font-weight: 700; /* Sets bold font weight. */
+    font-family: 'Poppins'; /* Sets specific font family. */
+    animation: slideInDown 1s ease; /* Applies a slide-in-down animation. */
+}
+
+/* Keyframes for slideInDown animation. */
+@keyframes slideInDown {
+    from {
+        opacity: 0; /* Starts transparent. */
+        transform: translateY(-50px); /* Starts 50px above. */
+    }
+    to {
+        opacity: 1; /* Ends opaque. */
+        transform: translateY(0); /* Ends at original position. */
+    }
+}
+
+/* Highlighted span in the hero heading. */
+.hero span {
+    color: #a259ff; /* Sets a distinct color. */
+}
+
+/* Title/subtitle in the hero section. */
+.title {
+    font-weight: 600; /* Sets a medium-bold font weight. */
+    font-size: 1.5rem; /* Sets font size. */
+    margin: 0.5rem 0 1rem; /* Adds vertical spacing. */
+    animation: slideInUp 1.2s ease; /* Applies a slide-in-up animation. */
+}
+
+/* Keyframes for slideInUp animation. */
+@keyframes slideInUp {
+    from {
+        opacity: 0; /* Starts transparent. */
+        transform: translateY(50px); /* Starts 50px below. */
+    }
+    to {
+        opacity: 1; /* Ends opaque. */
+        transform: translateY(0); /* Ends at original position. */
+    }
+}
+
+/* Button styles in the hero section. */
+.btn {
+    background: linear-gradient(90deg, #BC3CD8, #C54B8C); /* Gradient background for the button. */
+    color: #fff; /* White text color. */
+    padding: 1rem 2rem; /* Inner spacing. */
+    border-radius: 25px; /* Rounded corners. */
+    position: absolute; /* Positions the button relative to its parent (hero-content). */
+    font-weight: 600; /* Medium-bold font weight. */
+    bottom: 80px; /* Positions 80px from the bottom of its parent. */
+    cursor: pointer; /* Changes mouse cursor to a pointer when hovering over the button. */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation for size change and shadow. */
+}
+
+/* Hover effect for the main button. */
+.btn:hover {
+    transform: scale(1.05); /* Makes the button 5% larger when hovered over (the "grow" effect). */
+    box-shadow: 0 8px 20px rgba(188, 60, 216, 0.4); /* Adds a stronger shadow on hover. */
+}
+
+/* Base styles for the outline button (e.g., "Download Resume"). */
+.btn-outline {
+    display: inline-block; /* Makes it behave like an inline-block element so we can set width. */
+    padding: 0.5rem 1.2rem; /* Inner spacing. */
+    border: 1px solid #a259ff; /* Adds a border with a specific color. */
+    color: white; /* White text color. */
+    background: linear-gradient(90deg, #6735FF, #8C37D2); /* Gradient background for the button. */
+    font-weight: 500; /* Medium font weight. */
+    border-radius: 25px; /* Rounded corners. */
+    width: fit-content; /* Adjusts button width to fit its content. */
+    margin-left: 7%; /* Adds space to the left of the button. */
+    cursor: pointer; /* Changes mouse cursor to a pointer when hovering over the button. */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation for size change and shadow. */
+}
+
+/* Hover effect for the outline button. */
+.btn-outline:hover {
+    transform: scale(1.05); /* Makes the button 5% larger when hovered over. */
+    box-shadow: 0 8px 20px rgba(103, 53, 255, 0.4); /* Adds a stronger shadow on hover with a relevant color. */
+}
+
+/* About section styles. */
+.about {
+    padding: 3rem 2rem; /* Adds internal spacing. */
+    /* background: #f9f9f9; */ /* Commented out: Background color. */
+    display: flex; /* Uses Flexbox. */
+    flex-direction: column; /* Stacks items vertically. */
+}
+
+/* Heading in the about section. */
+.about h2 {
+    color: #4a00e0; /* Sets heading color. */
+    margin-bottom: 1rem; /* Adds space below heading. */
+    font-size: 2.2rem; /* Sets font size. */
+    text-align: center; /* Centers the text. */
+    text-decoration: underline; /* Adds an underline. */
+}
+
+/* Content area within the about section. */
+.about-content {
+    display: flex; /* Uses Flexbox. */
+    align-items: center; /* Vertically centers items. */
+    justify-content: space-around; /* Distributes items with space around them. */
+    gap: 2rem; /* Adds space between items (text and image). */
+    padding: 20px; /* Adds internal spacing. */
+}
+
+/* Paragraph text in the about section. */
+.about p {
+    width: 50%; /* Takes 50% width of its parent. */
+    font-size: 1.2rem; /* Sets font size. */
+    font-family: "jost"; /* Sets specific font family. */
+}
+
+/* Image container in the about section. */
+.img-cont {
+    /* Creates a radial gradient background for a subtle dot pattern. */
+    background: radial-gradient(circle, rgb(189, 189, 191) 2px, transparent 2px);
+    background-size: 15px 15px; /* Sets the size of the background pattern. */
+}
+
+/* About image styles. */
+.about-img {
+    width: 350px; /* Sets a fixed width. */
+    border-radius: 50%; /* Makes the image circular. */
+}
+
+/* Outline button styles for resume download. */
+.btn-outline {
+    display: inline-block; /* Makes it behave like an inline-block element. */
+    /* margin-top: rem; */ /* Commented out: Used for margin. */
+    padding: 0.5rem 1.2rem; /* Inner spacing. */
+    border: 1px solid #a259ff; /* Adds a border. */
+    color: white; /* White text color. */
+    background: linear-gradient(90deg, #6735FF, #8C37D2); /* Gradient background. */
+    font-weight: 500; /* Medium font weight. */
+    border-radius: 25px; /* Rounded corners. */
+    width: fit-content; /* Adjusts width to content size. */
+    margin-left: 7%; /* Adds space to the left. */
+}
+
+/* Center wrapper for the tech strip. */
+.center-wrapper {
+    display: flex; /* Uses Flexbox. */
+    align-items: center; /* Vertically centers content. */
+    justify-content: center; /* Horizontally centers content. */
+    /* height: 100vh; */ /* Commented out: Full viewport height. */
+}
+
+/* Tech strip section styles. */
+.tech-strip {
+    background: #ffffffee; /* White background with slight transparency. */
+    border-radius: 20px; /* Rounded corners. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow. */
+    padding: 40px 30px; /* Inner spacing. */
+    width: 90%; /* Takes 90% width. */
+    max-width: 1100px; /* Maximum width. */
+    text-align: center; /* Centers text. */
+}
+
+/* Heading in the tech strip. */
+.tech-strip h1 {
+    font-size: 2em; /* Sets font size. */
+    font-weight: 700; /* Bold font weight. */
+    color: #6c2bd9; /* Sets text color. */
+    margin-bottom: 10px; /* Adds space below heading. */
+}
+
+/* Paragraph in the tech strip. */
+.tech-strip p {
+    font-size: 1.1em; /* Sets font size. */
+    color: #444; /* Sets text color. */
+    margin-bottom: 30px; /* Adds space below paragraph. */
+}
+
+/* Icons container in the tech strip. */
+.icons {
+    display: flex; /* Uses Flexbox. */
+    justify-content: center; /* Horizontally centers icons. */
+    flex-wrap: wrap; /* Allows icons to wrap to the next line if space is limited. */
+    gap: 40px; /* Adds space between icons. */
+}
+
+/* Individual icon image styles. */
+.icons img {
+    width: 60px; /* Sets width. */
+    height: 60px; /* Sets height. */
+    transition: transform 0.3s ease; /* Adds smooth transition for transform property. */
+}
+
+/* Hover effect for tech icons. */
+.icons img:hover {
+    transform: scale(1.15); /* Slightly enlarges icon on hover. */
+}
+
+/* Media query for screens up to 600px width. */
+@media (max-width: 600px) {
+    .tech-strip {
+        padding: 30px 15px; /* Adjusts padding for smaller screens. */
+    }
+    .icons {
+        gap: 20px; /* Reduces gap between icons. */
+    }
+    .icons img {
+        width: 50px; /* Reduces icon size. */
+        height: 50px; /* Reduces icon size. */
+    }
+}
+
+/* Projects section styles. */
+.projects {
+    padding: 3rem 2rem; /* Adds internal spacing. */
+}
+
+/* Heading in the projects section. */
+.projects h2 {
+    text-align: center; /* Centers text. */
+    color: #4a00e0; /* Sets heading color. */
+    font-size: 2.2rem; /* Sets font size. */
+    margin-bottom: 2rem; /* Adds space below heading. */
+    text-decoration: underline; /* Adds an underline. */
+}
+
+/* Project grid container styles. */
+.project-grid {
+    display: flex; /* Uses Flexbox. */
+    align-items: center; /* Vertically centers items. */
+    flex-direction: column; /* Stacks items vertically. */
+    gap: 2rem; /* Adds space between project cards. */
+}
+
+/* Individual project card styles. */
+.project-card {
+    display: flex; /* Uses Flexbox. */
+    justify-content: space-around; /* Distributes items with space around them. */
+    gap: 2rem; /* Adds space between image and data. */
+    background: #fff; /* White background. */
+    padding: 1rem; /* Inner spacing. */
+    border-radius: 12px; /* Rounded corners. */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adds a shadow. */
+    text-align: center; /* Centers text. */
+    height: 350px; /* Fixed height for the card. */
+    max-width: 900px; /* Maximum width for the card. */
+    /* position: relative; */ /* Commented out: Used for absolute positioning of child elements. */
+    opacity: 0; /* Starts transparent for animation. */
+    transform: translateY(100px); /* Starts 100px below for animation. */
+    transition: all 1s ease; /* Smooth transition for all animated properties. */
+    /* transition: transform 0.3s ease; */ /* Commented out: Another transition. */
+}
+
+/* Style applied when a project card is visible (for intersection observer animation). */
+.project-card.visible {
+    opacity: 1; /* Becomes fully opaque. */
+    transform: translateY(0); /* Moves to its original vertical position. */
+}
+
+/* Hover effect for project cards. */
+.project-card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly on hover. */
+}
+
+/* Image container within a project card. */
+.image-card {
+    margin: auto 0; /* Centers the image vertically within its container. */
+}
+
+/* Image within a project card. */
+.image-card img {
+    border-radius: 8px; /* Rounded corners for the image. */
+    height: auto; /* Maintains aspect ratio. */
+    max-width: 270px; /* Maximum width for the image. */
+}
+
+/* Project data container within a project card. */
+.project-data {
+    text-align: start; /* Aligns text to the start (left). */
+    margin-top: 60px; /* Adds space from the top. */
+    width: 400px; /* Sets a fixed width. */
+}
+
+/* Heading within project data. */
+.project-data h3 {
+    font-size: 1.5rem; /* Sets font size. */
+    margin-bottom: 15px; /* Adds space below heading. */
+}
+
+/* Small button styles within project data. */
+.btn-sm {
+    display: inline-block; /* Makes it behave like an inline-block element. */
+    margin-top: 0.5rem; /* Adds space from the top. */
+    background: #a259ff; /* Sets background color. */
+    color: #fff; /* White text color. */
+    padding: 0.4rem 1rem; /* Inner spacing. */
+    border-radius: 20px; /* Rounded corners. */
+    font-size: 0.85rem; /* Sets font size. */
+    position: absolute; /* Positions the button absolutely within its parent project card. */
+    bottom: 20px; /* Positions 20px from the bottom of the project card. */
+    font-weight: 600; /* Medium-bold font weight. */
+    cursor: pointer; /* Changes mouse cursor to a pointer when hovering. */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth animation for size change and background. */
+}
+
+/* Hover effect for the small buttons. */
+.btn-sm:hover {
+    transform: scale(1.08); /* Makes the button 8% larger (a noticeable grow for a small button). */
+    background: #8b3cfa; /* Slightly darker shade of purple on hover. */
+}
+
+
+/* Media query for screens up to 991px width for project cards. */
+@media (max-width: 991px) {
+    .project-card {
+        opacity: 0; /* Starts transparent. */
+        transform: translateX(0); /* Resets horizontal transform for mobile. */
+        transition: all 0.8s ease; /* Smooth transition for all properties. */
+    }
+    /* Animation for project cards sliding in from the left on mobile. */
+    .slide-in-left.visible {
+        transform: translateX(0); /* Moves to original position. */
+        opacity: 1; /* Becomes opaque. */
+        animation: slideFromLeft 0.8s forwards; /* Applies animation. */
+    }
+    /* Animation for project cards sliding in from the right on mobile. */
+    .slide-in-right.visible {
+        transform: translateX(0); /* Moves to original position. */
+        opacity: 1; /* Becomes opaque. */
+        animation: slideFromRight 0.8s forwards; /* Applies animation. */
+    }
+    /* Keyframes for slideFromLeft animation. */
+    @keyframes slideFromLeft {
+        0% {
+            transform: translateX(-100%); /* Starts 100% to the left. */
+            opacity: 0; /* Starts transparent. */
+        }
+        100% {
+            transform: translateX(0); /* Ends at original position. */
+            opacity: 1; /* Ends opaque. */
+        }
+    }
+    /* Keyframes for slideFromRight animation. */
+    @keyframes slideFromRight {
+        0% {
+            transform: translateX(100%); /* Starts 100% to the right. */
+            opacity: 0; /* Starts transparent. */
+        }
+        100% {
+            transform: translateX(0); /* Ends at original position. */
+            opacity: 1; /* Ends opaque. */
+        }
+    }
+}
+
+/* Reviews section styles. */
+#reviews {
+    padding: 20px; /* Adds internal spacing. */
+    text-align: center; /* Centers text. */
+}
+
+/* Section title for reviews. */
+.section-title {
+    font-size: 1.8rem; /* Sets font size. */
+    font-weight: 700; /* Bold font weight. */
+    color: #7b2cbf; /* Sets text color. */
+    margin: 40px 0px; /* Adds vertical spacing. */
+}
+
+/* Review container styles. */
+.review-container {
+    display: flex; /* Uses Flexbox. */
+    justify-content: center; /* Horizontally centers review cards. */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line. */
+    gap: 30px; /* Adds space between cards. */
+}
+
+/* Individual review card styles. */
+.review-card {
+    background: white; /* White background. */
+    border-radius: 12px; /* Rounded corners. */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow. */
+    width: 300px; /* Fixed width. */
+    padding: 60px 20px 20px; /* Inner spacing. */
+    position: relative; /* Allows positioning of child elements (like the image). */
+    text-align: center; /* Centers text. */
+    transition: transform 0.3s ease; /* Smooth transition for transform property. */
+}
+
+/* Hover effect for review cards. */
+.review-card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly on hover. */
+}
+
+/* Review image styles. */
+.review-img {
+    width: 80px; /* Fixed width. */
+    height: 80px; /* Fixed height. */
+    border-radius: 50%; /* Makes the image circular. */
+    position: absolute; /* Positions the image absolutely. */
+    top: -40px; /* Positions 40px from the top (moves it outside the card). */
+    left: 50%; /* Centers horizontally. */
+    transform: translateX(-50%); /* Adjusts horizontal centering. */
+    border: 4px solid white; /* Adds a white border. */
+}
+
+/* Stars rating styles. */
+.stars {
+    font-size: 1.2rem; /* Sets font size. */
+    color: #ffc107; /* Yellow color for stars. */
+    margin-bottom: 10px; /* Adds space below stars. */
+}
+
+/* Review text styles. */
+.review-text {
+    font-size: 0.9rem; /* Sets font size. */
+    color: #333; /* Dark gray text color. */
+    margin: 10px 0 20px; /* Adds vertical spacing. */
+    padding: 0 10px; /* Adds horizontal inner spacing. */
+}
+
+/* Reviewer name styles. */
+.reviewer-name {
+    font-weight: bold; /* Bold font weight. */
+    margin: 0; /* Removes default margin. */
+    font-size: 1rem; /* Sets font size. */
+}
+
+/* Reviewer role styles. */
+.reviewer-role {
+    font-size: 0.8rem; /* Sets font size. */
+    color: gray; /* Gray text color. */
+}
+
+/* Contact section styles. */
+.contact {
+    padding: 3rem 2rem; /* Adds internal spacing. */
+    /* background: #f4f4f4; */ /* Commented out: Background color. */
+    display: flex; /* Uses Flexbox. */
+}
+
+/* Contact information container styles. */
+.contact-info {
+    width: 50%; /* Takes 50% width. */
+}
+
+/* Heading in contact info. */
+.contac-info h2 { /* Typo here: should be .contact-info h2 */
+    text-align: center; /* Centers text. */
+    margin-bottom: 1.5rem; /* Adds space below heading. */
+}
+
+/* Contact form styles. */
+.contact-form {
+    max-width: 500px; /* Maximum width. */
+    margin: auto; /* Centers the form horizontally. */
+    display: flex; /* Uses Flexbox. */
+    flex-direction: column; /* Stacks items vertically. */
+    gap: 1rem; /* Adds space between form fields. */
+}
+
+/* Styles for input and textarea in the contact form. */
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem; /* Inner spacing. */
+    border: 1px solid #ccc; /* Light gray border. */
+    border-radius: 10px; /* Rounded corners. */
+    font-size: 1rem; /* Sets font size. */
+}
+
+/* Styling for invalid input fields (added for JS validation). */
+input.invalid, textarea.invalid {
+    border-color: red !important; /* Changes border to red to highlight invalid input. */
+}
+
+/* Styles for error messages (added for JS validation). */
+.error-message {
+    color: red; /* Red text color. */
+    font-size: 0.85rem; /* Smaller font size. */
+    margin-top: -0.8rem; /* Pulls the message closer to the input field above it. */
+    margin-bottom: 0.5rem; /* Adds space below the message. */
+    display: block; /* Ensures the message takes its own line. */
+    text-align: left; /* Aligns text to the left. */
+}
+
+
+/* Contact form button styles. */
+.contact-form button {
+    padding: 0.8rem; /* Inner spacing. */
+    background: #a259ff; /* Sets background color. */
+    color: #fff; /* White text color. */
+    border: none; /* Removes any default border. */
+    border-radius: 25px; /* Rounded corners. */
+    cursor: pointer; /* Changes mouse cursor to a pointer when hovering. */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth animation for size change and background. */
+}
+
+/* Hover effect for the contact form button. */
+.contact-form button:hover {
+    transform: scale(1.02); /* Makes the button 2% larger (a subtle grow). */
+    background: #8b3cfa; /* Slightly darker shade of purple on hover. */
+}
+/* Avatar section styles. */
+.avatar {
+    text-align: center; /* Centers text. */
+    margin-top: 2rem; /* Adds space from the top. */
+    width: 50%; /* Takes 50% width. */
+}
+
+/* Avatar image styles. */
+.avatar img {
+    width: 150px; /* Fixed width. */
+    margin-bottom: 1rem; /* Adds space below image. */
+}
+
+/* Heading in the avatar section. */
+.avatar h3 {
+    font-weight: 800; /* Extra bold font weight. */
+    font-size: 3rem; /* Large font size. */
+    line-height: 3rem; /* Sets line height. */
+    margin-bottom: 10px; /* Adds space below heading. */
+}
+
+/* Highlighted span in the avatar heading. */
+.avatar h3 span {
+    color: #ff6ec4; /* Sets a distinct color. */
+}
+
+/* Paragraph in the avatar section. */
+.avatar p {
+    font-size: small; /* Smaller font size. */
+}
+
+/* Footer styles. */
+footer {
+    text-align: center; /* Centers text. */
+    padding: 1rem; /* Inner spacing. */
+    /* background: #fff; */ /* Commented out: Background color. */
+    border-top: 1px solid #ddd; /* Adds a top border. */
+}
+
+/* Social media icons container in the footer. */
+footer .socials {
+    margin-top: 0.5rem; /* Adds space from the top. */
+}
+
+/* Individual social media icon link styles. */
+footer .socials a {
+    margin: 0 0.5rem; /* Adds horizontal spacing. */
+    color: #333; /* Dark gray color. */
+    font-size: 1.2rem; /* Sets font size. */
+}
+
+/* Existing styles ... */
+
+/* Media query for screens up to 768px width (general responsiveness). */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto; /* Adjusts height for content. */
+        padding-top: 80px; /* Adds padding if navbar is fixed. */
+        text-align: center; /* Centers hero content. */
+    }
+    .hero-content {
+        flex-direction: column; /* Stacks image and intro text vertically. */
+        gap: 2rem; /* Adjusts gap. */
+        padding: 10% 5%; /* Adjusts padding. */
+    }
+    .profile-img {
+        width: 250px; /* Smaller profile image. */
+        height: 250px; /* Smaller profile image. */
+        margin-bottom: 1rem; /* Space below image. */
+    }
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller heading. */
+        margin-top: 0; /* Resets margin. */
+        margin-bottom: 1rem; /* Adjusts margin. */
+    }
+    .title {
+        font-size: 1.2rem; /* Smaller title. */
+        margin-bottom: 1.5rem; /* Adjusts margin. */
+    }
+    .btn {
+        position: static; /* Removes absolute positioning. */
+        display: inline-block; /* Allows margin auto to work if needed. */
+        margin-top: 1rem; /* Adjusts margin. */
+        padding: 0.8rem 1.5rem; /* Adjusts button padding. */
+        font-size: 0.9rem; /* Adjusts font size. */
+    }
+    .about {
+        padding: 2rem 1rem; /* Adjusts padding. */
+    }
+    .about h2 {
+        font-size: 1.8rem; /* Smaller section titles. */
+    }
+    .about-content {
+        flex-direction: column; /* Stacks text and image. */
+        gap: 1.5rem; /* Adjusts gap. */
+        padding: 10px; /* Adjusts padding. */
+    }
+    .about p {
+        width: 100%; /* Full width for text. */
+        font-size: 1rem; /* Adjusts font size. */
+        text-align: center; /* Centers text. */
+    }
+    .about-img {
+        width: 200px; /* Smaller about image. */
+        height: 200px; /* Smaller about image. */
+    }
+    .img-cont {
+        background-size: 10px 10px; /* Adjusts dot pattern. */
+    }
+    .btn-outline {
+        margin: 1rem auto 0; /* Centers button. */
+        display: block; /* Makes it a block to center with margin auto. */
+        width: max-content; /* Adjusts width to content. */
+    }
+    .tech-strip h1 {
+        font-size: 1.8em; /* Adjusts tech stack title. */
+    }
+    .tech-strip p {
+        font-size: 1em; /* Adjusts tech stack subtitle. */
+    }
+    .projects {
+        padding: 2rem 1rem; /* Adjusts padding. */
+    }
+    .projects h2 {
+        font-size: 1.8rem; /* Adjusts font size. */
+    }
+    .project-grid {
+        gap: 1.5rem; /* Adjusts gap. */
+    }
+    .project-card {
+        flex-direction: column; /* Stacks image and data. */
+        max-width: 100%; /* Allows cards to take full width. */
+        padding: 1rem; /* Adjusts padding. */
+        /* transform: none !important; Remove desktop animations if they conflict */
+        /* opacity: 1 !important; */
+    }
+    .project-card:hover {
+        transform: translateY(-5px); /* Less pronounced hover effect on mobile. */
+    }
+    .image-card img {
+        max-width: 200px; /* Smaller project images. */
+    }
+    .project-data {
+        width: 100%; /* Full width for project data. */
+        margin-top: 1rem; /* Adjusts spacing. */
+        text-align: center; /* Centers project text. */
+    }
+    .project-data h3 {
+        font-size: 1.3rem; /* Adjusts font size. */
+    }
+    .project-data p {
+        font-size: 0.9rem; /* Adjusts font size. */
+    }
+    .btn-sm {
+        position: static; /* Removes absolute positioning. */
+        margin-top: 1rem; /* Adjusts margin. */
+    }
+    .section-title {
+        /* For "Reviews" title */
+        font-size: 1.8rem; /* Adjusts font size. */
+        margin: 30px 0px; /* Adjusts margin. */
+    }
+    .review-container {
+        flex-direction: column; /* Stacks review cards. */
+        align-items: center; /* Centers cards. */
+        gap: 50px; /* Adjusts gap, considering the image offset. */
+    }
+    .review-card {
+        width: 90%; /* Makes cards wider on mobile. */
+        max-width: 320px; /* But not too wide. */
+        padding-top: 50px; /* Adjusts padding for image. */
+    }
+    .review-card:hover {
+        transform: translateY(-5px); /* Adjusts hover effect. */
+    }
+    .contact {
+        flex-direction: column; /* Stacks form and avatar info. */
+        padding: 2rem 1rem; /* Adjusts padding. */
+        gap: 2rem; /* Adjusts gap. */
+    }
+    .contact-info,
+    .avatar {
+        width: 100%; /* Full width for both sections. */
+    }
+    .contact-info h2 {
+        text-align: center; /* Centers text. */
+        font-size: 1.8rem; /* Adjusts font size. */
+    }
+    .avatar img {
+        width: 120px; /* Smaller avatar image. */
+    }
+    .avatar h3 {
+        font-size: 1.8rem; /* Smaller avatar heading. */
+        line-height: 2.2rem; /* Adjusts line height. */
+    }
+    .avatar p {
+        font-size: 0.9rem; /* Adjusts font size. */
+    }
+    footer p {
+        font-size: 0.9rem; /* Adjusts font size. */
+    }
+    footer .socials a {
+        font-size: 1.1rem; /* Adjusts font size. */
+    }
+}
+
+/* Further adjustments for very small screens if needed */
+
+/* Media query for screens up to 768px width (specific for navbar toggle). */
+@media (max-width: 768px) {
+    .navbar {
+        position: sticky; /* Makes navbar stick to the top when scrolling. */
+        top: 0; /* Positions it at the top. */
+        z-index: 1; /* Ensures it stays on top of other content. */
+        backdrop-filter: blur(10px); /* Adds a blur effect behind the navbar. */
+    }
+    .menu-toggle {
+        display: block; /* Shows the hamburger icon on mobile. */
+        font-size: 1.5rem; /* Makes it larger. */
+        cursor: pointer; /* Changes cursor to a pointer. */
+        padding: 0.5rem; /* Adds padding for easier tapping. */
+        margin-right: 10px; /* Adds space from the right edge. */
+        z-index: 1001; /* Ensures it's above other elements. */
+    }
+    .nav-links {
+        display: none; /* Hides navigation links by default on mobile. */
+        flex-direction: column; /* Stacks links vertically. */
+        position: absolute; /* Positions links absolutely. */
+        top: 60px; /* Positions below the navbar. */
+        right: 0; /* Aligns to the right. */
+        background: #fff; /* White background for the menu. */
+        width: 220px; /* Sets width for the menu. */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Adds a shadow. */
+        border-radius: 0 0 10px 10px; /* Rounded corners at the bottom. */
+        padding: 1rem; /* Inner spacing. */
+        z-index: 1000; /* Ensures it's above page content. */
+    }
+    /* Style applied when the 'show' class is added to nav-links (by JS). */
+    .nav-links.show {
+        display: flex; /* Shows the navigation links. */
+        /* Gradient background for the mobile menu. */
+        background: linear-gradient(135deg, #fefae0 0%, #fadadd 40%, #e0c3fc 80%, #8ec5fc 100%);
+    }
+    .nav-links li {
+        padding: 0.5rem 0; /* Adds vertical padding to list items. */
+        text-align: right; /* Aligns text to the right. */
+        border-bottom: 1px solid #eee; /* Adds a bottom border for separation. */
+    }
+    .nav-links li:last-child {
+        border-bottom: none; /* Removes border from the last item. */
+    }
+}
+
+/* Media query for screens up to 780px width (general adjustments). */
+@media screen and (max-width: 780px) {
+    .profile-img {
+        width: 200px; /* Smaller profile image. */
+        height: 200px; /* Smaller profile image. */
+    }
+    .intro {
+        text-align: center; /* Centers text within intro block. */
+        display: flex; /* Makes intro a flex container. */
+        flex-direction: column; /* Stacks its children vertically. */
+        align-items: center; /* Centers its children (including the button). */
+    }
+    .hero h1 {
+        font-size: 2rem; /* Smaller hero heading. */
+    }
+    .title {
+        font-size: 1rem; /* Smaller title. */
+    }
+    .btn {
+        padding: 0.7rem 1.2rem; /* Adjusts button padding. */
+        font-size: 0.8rem; /* Adjusts font size. */
+        justify-content: center; /* Centers button horizontally. */
+        align-items: center; /* Centers button vertically. */
+    }
+    .about-content,
+    .contact {
+        display: flex; /* Ensures it's a flex container. */
+        flex-direction: column-reverse; /* Reverses the order of stacking. */
+        gap: 1.5rem; /* Adjusts spacing. */
+        padding: 10px; /* Adjusts padding. */
+        align-items: center; /* Centers items horizontally. */
+    }
+    .about p {
+        font-size: 0.9rem; /* Smaller font size. */
+    }
+    .about-img {
+        width: 180px; /* Smaller about image. */
+        height: 180px; /* Smaller about image. */
+    }
+    .icons img {
+        /* Tech stack icons */
+        width: 45px; /* Smaller icons. */
+        height: 45px; /* Smaller icons. */
+        gap: 15px; /* Adjusts gap. */
+    }
+    .project-card {
+        display: flex; /* Uses Flexbox. */
+        flex-direction: column; /* Ensures image and data stack vertically. */
+        max-width: 100%; /* Card takes full available width. */
+        padding: 1rem; /* Padding inside the card. */
+        box-sizing: border-box; /* Ensures padding is included in width/height. */
+        height: fit-content; /* Adjusts height to content. */
+        /* overflow: hidden; */ /* Use this as a last resort if you prefer to clip content. */
+    }
+    .project-data h3 {
+        font-size: 1.1rem; /* Smaller font size. */
+    }
+    .project-data p {
+        font-size: 0.85rem; /* Smaller font size. */
+    }
+    .avatar h3 {
+        font-size: 1.5rem; /* Smaller avatar heading. */
+        line-height: 1.8rem; /* Adjusts line height. */
+    }
+    .avatar p {
+        font-size: 0.8rem; /* Smaller font size. */
+    }
+}
